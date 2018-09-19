@@ -29,17 +29,9 @@ By [@IonicThemes][]
 ---
 
 
-<Image src='http://www.lavanguardiadigital.com.ar/wp-content/uploads/2016/12/4757014362_9bd80ebcfe_b.jpg'/>
-
----
-
 ## Qué es una PWA?
 
-Es una aplicación creada con tecnologías web que, -sin empaquetarla ni firmarla-, puede funcionar sin conexión y, opcionalmente, puede instalarse en el sistema operativo donde ** se verá y actuará como cualquier otra aplicación**.
-
-```notes
-- Create speaker notes in fenced code blocks
-```
+Es una aplicación creada con tecnologías web que, sin empaquetarla ni firmarla, puede funcionar sin conexión y, opcionalmente, puede instalarse en el sistema operativo donde ** se verá y actuará como cualquier otra aplicación**.
 
 ---
 
@@ -51,7 +43,25 @@ No es un framework ni una tecnología, sino un set de buenas prácticas para hac
 
 ## Qué es una PWA?
 
-Look and feel de aplicaciones nativas. Se ubican en la home screen del celular, envían push notifications y tienen acceso a algunas funcionalidades del dispositivo, al igual que las aplicaciones nativas.
+Tienen el look and feel de las aplicaciones nativas. Se ubican en la home screen del celular, envían push notifications y tienen acceso a algunas funcionalidades del dispositivo, al igual que las aplicaciones nativas.
+
+---
+
+### The Web is for audience reach and native apps are for rich experiences.
+### Both are strategic.
+### Both are valuable.
+### So when it comes to mobile, it’s not Web vs Native.
+### It’s both.
+
+---
+### Instalate la PWA de esta charla
+
+[https://pwa-talk-meetup.firebaseapp.com/](https://pwa-talk-meetup.firebaseapp.com/)
+
+Abrila desde tu celular.
+
+Si usas iOS que sea desde Safari.
+
 
 ---
 export default Invert
@@ -60,7 +70,12 @@ export default Invert
 
 ---
 
-### Las PWAs buscan ser y ofrecer lo mejor de los 2 mundos (responsive web y nativo)
+### Las PWAs buscan ser y ofrecer lo mejor de los 2 mundos:
+
+
+### Webs Responsive
+### Y
+### Apps Nativas
 
 ---
 
@@ -69,12 +84,12 @@ export default Invert
 - Conexión a internet lenta
 - Webs que cargan lento
 - Fricción al instalar apps nativas
-- Engagement del usuario
+- Bajo engagement del usuario en web
 
 ```notes
-- Velocidad de internet: Depende de dónde vivas, puede que no percibas la dimensión de este problema, pero el 60% de la población mundial usa internet 2G.
+- Conexión a internet: Depende de dónde vivas, puede que no percibas la dimensión de este problema, pero el 60% de la población mundial usa internet 2G.
 - Webs que cargan lento: 53% de los usuarios abandonan el sitio si demora más de 3 segundos en cargar.
-- Fricción al instalar apps nativas: la gente no quiere instalarse apps nativas! En promedio la gente instala 0 apps por mes, compará esto con la cantidad de sitios webs que entrás por mes. Además pensá en la cantidad de apps nativas que te instalaste y usaste solo 1 o 2 veces.
+- Fricción: la gente no quiere instalarse apps nativas! En promedio la gente instala 0 apps por mes, compará esto con la cantidad de sitios webs que entrás por mes. Además pensá en la cantidad de apps nativas que te instalaste y usaste solo 1 o 2 veces.
 - Engagement del usuario: si bien los sitios web responsive tienen mucho más alcance y audiencia que las aplicaciones nativas, las webs carecen de funcionalidades como push notifications y soporte offline. Esto resulta en que los niveles de user engagement de las responsive web apps sean muuucho menos que los de una app nativa.
 ```
 
@@ -91,10 +106,10 @@ export default Invert
 - APP LIKE: Para el usuario se siente como una aplicación de verdad, de hecho puede tener navegaciones o interacciones iguales a las de una app.
 - FRESH: Gracias a las técnicas de cache que emplean los service workers el contenido de nuestra app siempre va a estar actualizado.
 - SAFE: Se sirve a través de https
-- DISCOVERABLE: Los search engines pueden encontrar e indexar el contenido. Esto es re importante para SEO. Esta es una clara ventaja ante las apps nativas que su contenido permanece oculto y encapsulado dentro de la app.
-- Re-ENGANGABLE: Makes re-engagement easy through features like push notifications.
-- INSTALLABLE: Permite que los usuarios se guarden las apps que les gustaron o que encontraron valiosas en su home screen sin tener que pasar por el appstore.
-- LINKABLE: Es posible compartir las URLs lo que favorece la distribución de la app. Esta es otra gran ventaja frente a las apps nativas donde para compartir un link que te lleve adentro de la app hay que configurar los deeplinks y el otro usuario tiene que tener la app instalada.
+- DISCOVERABLE: Los motores de busqueda pueden encontrar e indexar el contenido. Esto es re importante para SEO.
+- Re-ENGANGABLE: push notifications.
+- INSTALLABLE: Permite que los usuarios se guarden las apps que les gustaron en su home screen sin tener que pasar por el appstore.
+- LINKABLE: Es posible compartir las URLs lo que favorece la distribución de la app.
 ```
 ---
 export default Invert
@@ -201,6 +216,7 @@ Engaging is not only about push notifications, is to have an unobtrusive way for
 
 La combinación de costos de adquisición de usuarios más baratos, mejores conversiones y métricas de engagement, hace muy atractivo crear una PWA. Más aún si se garantiza que la UX está a la par con la de las apps nativas.
 
+
 ---
 ## PWAs con Ionic 4
 
@@ -304,6 +320,11 @@ $ ng add @angular/pwa
 
 ```notes
 - Los principales requerimientos de una PWA son Service worker y Web Manifest. Al agregar el paquete @angular/pwa nos los agrega al proyecto automagicamente.
+
+- Service Workers: es un script que corre en un thread separado que el resto de la app y que puede hacer ciertas tareas en background como por ejemplo manejar las push notifications y las distintas estrategias de Cache.
+
+- Web Manifest: es un json que tiene la info de la app como titulo, icono, descripción
+
 ```
 ---
 ### Test again
@@ -342,8 +363,11 @@ export default Invert
 ![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/lighthouse-4.png)
 
 ---
-### GIVE ME THE CODE!
-Repo completo con Push notifications y Firebase Deploy en: [https://github.com/agustinhaller/pwa-talk](https://github.com/agustinhaller/pwa-talk)
+### GIVE ME THE CODE
+Repo completo con Push notifications y Firebase deploy: [https://github.com/agustinhaller/pwa-talk](https://github.com/agustinhaller/pwa-talk)
+
+PWA:
+[https://pwa-talk-meetup.firebaseapp.com/](https://pwa-talk-meetup.firebaseapp.com/)
 
 ---
 
