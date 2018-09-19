@@ -1,18 +1,41 @@
-import { Head } from 'mdx-deck'
+import { Head, Image } from 'mdx-deck'
+export { future as theme } from 'mdx-deck/themes'
 
-export { default as theme } from './theme'
+import {
+  Box,
+  Card,
+  Heading,
+  Text
+} from 'rebass'
+
+import { Invert } from 'mdx-deck/layouts'
 
 <Head>
   <title>Presentation Title</title>
 </Head>
 
-# Hello
+## Progressive Web Apps con
+
+<Box
+  p={3}
+  fontSize={4}
+  color='white'
+  bg='#07f'>
+  Ionic Framework
+</Box>
+
+By [@IonicThemes][]
+[@IonicThemes]: https://twitter.com/ionicthemes
+---
+
+
+<Image src='http://www.lavanguardiadigital.com.ar/wp-content/uploads/2016/12/4757014362_9bd80ebcfe_b.jpg'/>
 
 ---
 
-## Edit this file
+## Qué es una PWA?
 
-To create your presentation
+Es una aplicación creada con tecnologías web que, -sin empaquetarla ni firmarla-, puede funcionar sin conexión y, opcionalmente, puede instalarse en el sistema operativo donde ** se verá y actuará como cualquier otra aplicación**.
 
 ```notes
 - Create speaker notes in fenced code blocks
@@ -20,4 +43,312 @@ To create your presentation
 
 ---
 
-<https://github.com/jxnblk/mdx-deck>
+## Qué es una PWA?
+
+No es un framework ni una tecnología, sino un set de buenas prácticas para hacer que una aplicación web funcione cómo una aplicación móvil.
+
+---
+
+## Qué es una PWA?
+
+Look and feel de aplicaciones nativas. Se ubican en la home screen del celular, envían push notifications y tienen acceso a algunas funcionalidades del dispositivo, al igual que las aplicaciones nativas.
+
+---
+
+<Image src='https://developers.google.com/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg'/>
+---
+
+### Las PWAs buscan ser y ofrecer lo mejor de los 2 mundos (responsive web y nativo)
+
+---
+
+### Las PWAs pretenden solucionar los problemas causados por:
+
+- Conexión a internet lenta
+- Webs que cargan lento
+- Fricción al instalar apps nativas
+- Engagement del usuario
+
+```notes
+- Velocidad de internet: Depende de dónde vivas, puede que no percibas la dimensión de este problema, pero el 60% de la población mundial usa internet 2G.
+- Webs que cargan lento: 53% de los usuarios abandonan el sitio si demora más de 3 segundos en cargar.
+- Fricción al instalar apps nativas: la gente no quiere instalarse apps nativas! En promedio la gente instala 0 apps por mes, compará esto con la cantidad de sitios webs que entrás por mes. Además pensá en la cantidad de apps nativas que te instalaste y usaste solo 1 o 2 veces.
+- Engagement del usuario: si bien los sitios web responsive tienen mucho más alcance y audiencia que las aplicaciones nativas, las webs carecen de funcionalidades como push notifications y soporte offline. Esto resulta en que los niveles de user engagement de las responsive web apps sean muuucho menos que los de una app nativa.
+```
+
+---
+export default Invert
+
+## Características de una PWA
+
+![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/pwa-features.png)
+
+```notes
+- RESPONSIVE: se adapta a cualquier dispositivo
+- CONNECTIVITY INDEPENDENT: Usa service workers para poder funcionar sin conexión.
+- APP LIKE: Para el usuario se siente como una aplicación de verdad, de hecho puede tener navegaciones o interacciones iguales a las de una app.
+- FRESH: Gracias a las técnicas de cache que emplean los service workers el contenido de nuestra app siempre va a estar actualizado.
+- SAFE: Se sirve a través de https
+- DISCOVERABLE: Los search engines pueden encontrar e indexar el contenido. Esto es re importante para SEO. Esta es una clara ventaja ante las apps nativas que su contenido permanece oculto y encapsulado dentro de la app.
+- Re-ENGANGABLE: Makes re-engagement easy through features like push notifications.
+- INSTALLABLE: Permite que los usuarios se guarden las apps que les gustaron o que encontraron valiosas en su home screen sin tener que pasar por el appstore.
+- LINKABLE: Es posible compartir las URLs lo que favorece la distribución de la app. Esta es otra gran ventaja frente a las apps nativas donde para compartir un link que te lleve adentro de la app hay que configurar los deeplinks y el otro usuario tiene que tener la app instalada.
+```
+---
+export default Invert
+
+## Ventajas frente a una Web Responsive
+
+![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/pwa-features-web.png)
+
+---
+export default Invert
+
+## Ventajas frente a una App Nativa
+
+![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/pwa-features-native.png)
+
+```notes
+- LINKABLE: Gran ventaja frente a las apps nativas donde para compartir un link que te lleve adentro de la app hay que configurar los deeplinks y el otro usuario tiene que tener la app instalada.
+- DISCOVERABLE: Esta es una clara ventaja ante las apps nativas que su contenido permanece oculto y encapsulado dentro de la app.
+```
+
+---
+
+## Beneficios de las PWA
+<Box
+  p={2}
+  fontSize={2}
+  color='white'
+  bg='#07f'>
+  Adquisición de Usuarios
+</Box>
+
+- Destinar espacio en el celular
+- Fricción de los App Store
+- Discoverability of the web (orgánico y democrático)
+- "In the moment" services
+
+```notes
+- Fricción: poder probar el servicio que ofrece la app a ver si te gusta o sirve
+- In the momento: Ejemplo de Uber en aeropuertos, deliverys
+-
+```
+
+
+---
+
+## Beneficios de las PWA
+<Box
+  p={2}
+  fontSize={2}
+  color='white'
+  bg='#07f'>
+  Performance
+</Box>
+
+- Brindan un experiencia "rápida"
+- Aprovechamiento del Cache
+- Soporte offline o con conexión pobre
+
+```notes
+- Experiencia rapida: desde el momento que te instalas la app hasta que empezas a interactuar con ella todo pasa muy rápido.
+- Cache: Debido a que aprovechan el caché, los usos repetidos de la aplicación no tienen que volver a hacer el request, lo que resulta en una experiencia aún más rápida.
+```
+---
+
+## Beneficios de las PWA
+<Box
+  p={2}
+  fontSize={2}
+  color='white'
+  bg='#07f'>
+  Engagement
+</Box>
+
+Engaging is not only about push notifications, is to have an unobtrusive way for users to try the service and taste the potential value of your product early on.
+
+---
+
+## Stats
+[https://www.pwastats.com/](https://www.pwastats.com/)
+
+---
+### Tinder:
+- Tiempo de carga pasó de 11.91 a 4.69 seg.
+- 90% más liviana que la app nativa de android
+- User engagement subió
+
+---
+### Pinterest:
+- User engagement subió 60%
+- 44% más de ganancias por mostrar ads
+- Tiempo en la app subió 40%
+
+---
+### Flipkart:
+- Driving 50% of its new customer acquisition
+- El 60% de los usuarios de la PWA desinstaló la nativa para ahorrar espacio
+
+---
+### Infobae:
+- Sesiones 230% más largas
+- 3x más pageviews que la app nativa
+
+---
+
+La combinación de costos de adquisición de usuarios más baratos, mejores conversiones y métricas de engagement, hace muy atractivo crear una PWA. Más aún si se garantiza que la UX está a la par con la de las apps nativas.
+
+---
+## PWAs con Ionic 4
+
+1. Framework Agnostic - [Ionic PWA Toolkit](https://ionicframework.com/pwa/toolkit)
+
+@ionic/core + [Stencil](https://stenciljs.com/) + [Workbox](https://developers.google.com/web/tools/workbox/)
+
+2. Con Angular - [Ionic Angular PWA](
+https://github.com/angular/angular/blob/master/aio/content/guide/service-worker-getting-started.md#adding-a-service-worker-to-your-project)
+
+@ionic/angular y @angular/pwa
+
+
+```notes
+- Sin depender de un framework frontend como Angular, React or Vue.
+-Usa Stencil for compiling and building the app,
+- Workbox to enforce best practices and easing the boilerplate needed when working with service workers and cache strategies
+- Ionic Core for routing and all the reusable UI components Ionic is known for.
+- Son 2 caminos diferentes, no se pueden combinar
+
+```
+
+---
+## A programar!
+
+```
+<Code Time />
+```
+---
+
+Start a new Ionic App
+
+```
+$ ionic start pwaTalk sidemenu --type=angular
+```
+---
+### Iteración 1
+
+Test it with Ionic built in **development server**
+
+```
+$ ionic serve
+```
+---
+
+Run PWA checklist with [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+
+```
+$ npm install -g lighthouse
+
+
+$ lighthouse http://localhost:8100 --view
+```
+
+---
+export default Invert
+
+### Resultado #1
+
+![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/lighthouse-1.png)
+
+```notes
+- Como podemos ver La primer corrida tiene malos resultados dado que estamos sirviendo la app de un dev server y que el código no está con los ajustes de producción como ser minificación.
+```
+---
+### Iteración 2
+
+Test the Ionic App with a **production server**
+
+```
+$ ionic build --prod
+
+$ npm install -g http-server
+
+$ http-server ./www -p 8888
+
+$ lighthouse http://localhost:8888 --view
+```
+
+```notes
+- Este comando va a compilar el codigo para producción y el output lo va a tirar en la carpeta www
+```
+---
+export default Invert
+
+### Resultado #2
+
+![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/lighthouse-2.png)
+
+---
+### Iteración 3
+
+Add PWA Capabilities (@angular/pwa)
+- Service worker
+- Web Manifest
+
+```
+$ ng add @angular/pwa
+
+```
+
+```notes
+- Los principales requerimientos de una PWA son Service worker y Web Manifest. Al agregar el paquete @angular/pwa nos los agrega al proyecto automagicamente.
+```
+---
+### Test again
+
+```
+$ ionic build --prod
+
+$ http-server ./www -p 8888
+
+$ lighthouse http://localhost:8888 --view
+```
+---
+export default Invert
+
+### Resultado #3
+
+![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/lighthouse-3.png)
+
+```notes
+- Miren como mejoramos el puntaje de PWA drásticamente
+- Estamos en 92 y no en 100 porque estamos sirviendo la app desde http y no https que si recuerdan era uno de los principios de PWA.
+```
+---
+
+### Iteración 4
+Deploy the app
+
+```
+$ lighthouse https://pwa-talk-meetup.firebaseapp.com --view
+```
+---
+export default Invert
+
+### Resultado #4
+
+![](https://s3-us-west-2.amazonaws.com/ionicthemes/pwa-talk/lighthouse-4.png)
+
+---
+### GIVE ME THE CODE!
+Repo completo con Push notifications y Firebase Deploy en: [https://github.com/agustinhaller/pwa-talk](https://github.com/agustinhaller/pwa-talk)
+
+---
+
+# Gracias
+
+[@dayujabif](https://twitter.com/dayujabif)
+
+[@agustinhaller](https://twitter.com/agustinhaller)
+
+[@ionicthemes](https://twitter.com/ionicthemes)

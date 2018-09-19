@@ -2,7 +2,6 @@ import theme from 'mdx-deck/themes'
 
 export default {
   ...theme,
-
   // Customize your presentation theme here.
   //
   // Read the docs for more info:

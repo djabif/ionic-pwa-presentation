@@ -15,5 +15,8 @@
   "devDependencies": {
     "mdx-deck": "^1.6.7"
   },
-  "name": "my-presentation-name"
+  "name": "my-presentation-name",
+  "dependencies": {
+    "rebass": "^3.0.0-8"
+  }
 }
